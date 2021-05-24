@@ -1,30 +1,19 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
-import Color from "../utils/Color";
+import { Text, View } from "react-native";
 import Checkbox from "./Checkbox";
 
 const Card = () => {
   const [completed, setCompleted] = useState(false);
   return (
-    <View style={styles.container}>
+    <Card>
       <Checkbox
         value={completed}
         style={{}}
         onPress={() => setCompleted(!completed)}
       />
       <Text>Todays task</Text>
-    </View>
+    </Card>
   );
 };
 
 export default Card;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: -1,
-    flexDirection: "row",
-    padding: 20,
-    backgroundColor: Color.secondary,
-    borderRadius: 10,
-  },
-});

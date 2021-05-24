@@ -1,15 +1,13 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
-import Card from "./src/components/Card";
 import Color from "./src/utils/Color";
+import Header from "./src/components/Header";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Card>Task for today</Card>
-      <Card>Task for today</Card>
-      <Card>Task for today</Card>
+      <Header />
       <StatusBar style="auto" />
     </View>
   );

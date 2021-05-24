@@ -1,20 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import Color from "../utils/Color";
 import Checkbox from "./Checkbox";
 
-const Card = () => {
-  const [completed, setCompleted] = useState(false);
-  return (
-    <View style={styles.container}>
-      <Checkbox
-        value={completed}
-        style={{}}
-        onPress={() => setCompleted(!completed)}
-      />
-      <Text>Todays task</Text>
-    </View>
-  );
+const Card = ({ children }) => {
+  return <View style={styles.container}>{children}</View>;
 };
 
 export default Card;
