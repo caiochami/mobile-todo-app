@@ -1,12 +1,17 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
-const Checkbox = () => {
+const Checkbox = ({ value, onPress }) => {
   return (
-    <View>
-      <Text>Checkbox</Text>
-    </View>
+    <TouchableOpacity style={styles} onPress={onPress}>
+      <Text>{value ? "Checked" : "Unchecked"}</Text>
+    </TouchableOpacity>
   );
 };
 
 export default Checkbox;
+
+const styles = StyleSheet.create({
+  borderRadius: 10,
+  borderColor: "#fff",
+});

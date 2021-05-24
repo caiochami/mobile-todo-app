@@ -1,13 +1,15 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import Checkbox from "./src/components/Checkbox";
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, View } from "react-native";
+import Card from "./src/components/Card";
 import Color from "./src/utils/Color";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Checkbox></Checkbox>
+      <Card>Task for today</Card>
+      <Card>Task for today</Card>
+      <Card>Task for today</Card>
       <StatusBar style="auto" />
     </View>
   );
@@ -17,7 +19,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Color.background,
-    alignItems: "center",
-    justifyContent: "center",
+    padding: 10,
   },
 });
